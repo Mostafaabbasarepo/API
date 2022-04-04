@@ -1,8 +1,6 @@
-from fastapi import FastAPI, File, UploadFile
-
+from fastapi import FastAPI
 app = FastAPI()
 
-
-@app.post("/files/")
-async def create_file(file: bytes = File(...)):
-    return {"file_size": "ibrahim 5awal"}
+@app.get("/")
+def hello():
+    return {"message":"Hello TutLinks.com"}
